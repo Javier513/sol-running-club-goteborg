@@ -13,7 +13,7 @@
   "about": {
     "title": "Om Oss",
     "story_title": "Vår Historia",
-    "story_text": "Sol Running Club föddes i Göteborg ur passionen hos en liten grupp löpare som ville dela mer än kilometer: de ville dela energi, motivation och skönheten i att springa genom gatorna och parkerna i denna fantastiska stad. Vi började som fyra vänner och idag är vi en levande gemenskap av löpare på alla nivåer.",
+    "story_text": "Sol Running Club föddes i Málaga ur passionen hos en liten grupp löpare som ville dela mer än kilometer: de ville dela energi, motivation och skönheten i att springa genom gatorna och parkerna i denna fantastiska stad. Vi började som fyra vänner och idag är vi en levande gemenskap av löpare på alla nivåer.",
     "story_text2": "Vårt namn, Sol, speglar den positiva energi vi tar med oss till varje träning. Även om Göteborg inte alltid har sol, tar vi alltid med den oss.",
     "values_title": "Våra Värderingar",
     "value1_title": "Inkludering",
@@ -24,7 +24,7 @@
     "value3_text": "Vi springer för att vi älskar att springa. Glädjen i varje kilometer driver oss.",
     "meetups_title": "Våra Träffar",
     "monday_title": "Måndag",
-    "monday_time": "18:30",
+    "monday_time": "18:00",
     "monday_desc": "Lugn träning i början av veckan. Perfekt för nybörjare och för att aktivera kroppen.",
     "monday_distance": "5-8 km",
     "thursday_title": "Torsdag",
@@ -32,11 +32,11 @@
     "thursday_desc": "Intervall- och teknikträning. För alla nivåer med anpassade grupper.",
     "thursday_distance": "6-10 km",
     "sunday_title": "Söndag",
-    "sunday_time": "09:00",
+    "sunday_time": "10:00",
     "sunday_desc": "Lång helgtur. Vi utforskar rutter genom parkerna och längs Göta älv.",
     "sunday_distance": "10-20 km",
     "meeting_point": "Mötesplats",
-    "meeting_location": "Kungsparken, Göteborg"
+    "meeting_location": "Fysiken Gibraltargatan, Göteborg"
   },
   "contact": {
     "title": "Gå med i klubben",

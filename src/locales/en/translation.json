@@ -24,7 +24,7 @@
     "value3_text": "We run because we love running. The joy of every kilometer drives us.",
     "meetups_title": "Our Meetups",
     "monday_title": "Monday",
-    "monday_time": "18:30",
+    "monday_time": "18:00",
     "monday_desc": "Easy start-of-week training. Ideal for beginners and to activate the body.",
     "monday_distance": "5-8 km",
     "thursday_title": "Thursday",
@@ -32,11 +32,11 @@
     "thursday_desc": "Interval and technique training. For all levels with adapted groups.",
     "thursday_distance": "6-10 km",
     "sunday_title": "Sunday",
-    "sunday_time": "09:00",
+    "sunday_time": "10:00",
     "sunday_desc": "Long weekend run. We explore routes through the parks and the Göta river.",
     "sunday_distance": "10-20 km",
     "meeting_point": "Meeting point",
-    "meeting_location": "Kungsparken, Göteborg"
+    "meeting_location": "Fysiken Gibraltargatan, Göteborg"
   },
   "contact": {
     "title": "Join the Club",
