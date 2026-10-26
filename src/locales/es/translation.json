@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Quiénes Somos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Sol Running Club Göteborg",
+    "subtitle": "Correr juntos nos hace mejores",
+    "cta": "Únete al club",
+    "cta2": "Ver quedadas"
+  },
+  "about": {
+    "title": "Quiénes Somos",
+    "story_title": "Nuestra Historia",
+    "story_text": "Sol Running Club nació en Málaga de la pasión de un pequeño grupo de corredores que querían compartir algo más que kilómetros: querían compartir energía, motivación y la belleza de correr por las calles y parques de esta ciudad increíble. Empezamos siendo cuatro amigos y hoy somos una comunidad vibrante de corredores de todos los niveles.",
+    "story_text2": "Nuestro nombre, refleja esa energía positiva que traemos a cada entrenamiento.",
+    "values_title": "Nuestros Valores",
+    "value1_title": "Inclusividad",
+    "value1_text": "Somos un club para todos: principiantes, intermedios y avanzados. Nadie se queda atrás.",
+    "value2_title": "Comunidad",
+    "value2_text": "Más que un club de running, somos una familia que se apoya mutuamente.",
+    "value3_title": "Pasión",
+    "value3_text": "La alegría de cada kilómetro nos mueve.",
+    "meetups_title": "Nuestras Quedadas",
+    "monday_title": "Lunes",
+    "monday_time": "18:00",
+    "monday_desc": "Entrenamiento suave de inicio de semana. Ideal para principiantes y para activar el cuerpo.",
+    "monday_distance": "5-8 km",
+    "thursday_title": "Jueves",
+    "thursday_time": "18:00",
+    "thursday_desc": "Entrenamiento de intervalos y técnica. Para todos los niveles con grupos adaptados.",
+    "thursday_distance": "6-10 km",
+    "sunday_title": "Domingo",
+    "sunday_time": "10:00",
+    "sunday_desc": "Tirada larga del fin de semana. Exploramos rutas por los parques y el río Göta.",
+    "sunday_distance": "10-20 km",
+    "meeting_point": "Punto de encuentro",
+    "meeting_location": "Fysiken Gibraltargatan, Göteborg"
+  },
+  "contact": {
+    "title": "Únete al Club",
+    "subtitle": "¿Listo para correr con nosotros? Rellena el formulario y nos ponemos en contacto contigo.",
+    "name": "Nombre",
+    "surname": "Apellidos",
+    "birthdate": "Fecha de Nacimiento",
+    "email": "Email",
+    "phone": "Teléfono",
+    "level": "Nivel",
+    "level_beginner": "Principiante",
+    "level_intermediate": "Medio",
+    "level_professional": "Profesional",
+    "purpose": "Motivo",
+    "purpose_join": "Unirme al club",
+    "purpose_monday": "Apuntarme al Lunes",
+    "purpose_thursday": "Apuntarme al Jueves",
+    "purpose_sunday": "Apuntarme al Domingo",
+    "message": "Mensaje (opcional)",
+    "send": "Enviar",
+    "success_title": "¡Registro enviado!",
+    "success_text": "Gracias por unirte a Sol Running Club. Nos pondremos en contacto contigo pronto.",
+    "error_text": "Hubo un error. Por favor, inténtalo de nuevo.",
+    "name_placeholder": "Tu nombre",
+    "surname_placeholder": "Tus apellidos",
+    "email_placeholder": "tu@email.com",
+    "phone_placeholder": "+46 XXX XXX XXX",
+    "message_placeholder": "Cuéntanos algo sobre ti o tu experiencia corriendo..."
+  },
+  "accessibility": {
+    "title": "Accesibilidad",
+    "dyslexia": "Fuente dislexia",
+    "magnifier": "Lupa",
+    "highlight_links": "Resaltar enlaces"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "made_with": "Hecho con ❤️ en Göteborg"
+  },
+  "chat": {
+    "tooltip": "Chatea con nosotros en WhatsApp"
+  },
+  "theme": {
+    "light": "Modo claro",
+    "dark": "Modo oscuro"
+  }
+}

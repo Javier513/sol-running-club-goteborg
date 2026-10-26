@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Sol Running Club Göteborg",
+    "subtitle": "Running together under the northern sun",
+    "cta": "Join the club",
+    "cta2": "See meetups"
+  },
+  "about": {
+    "title": "About Us",
+    "story_title": "Our Story",
+    "story_text": "Sol Running Club was born in Göteborg from the passion of a small group of runners who wanted to share more than kilometers: they wanted to share energy, motivation and the beauty of running through the streets and parks of this incredible city. We started as four friends and today we are a vibrant community of runners of all levels.",
+    "story_text2": "Our name, Sol, reflects the positive energy we bring to every training session. Even though Göteborg doesn't always have sun, we always bring it with us.",
+    "values_title": "Our Values",
+    "value1_title": "Inclusivity",
+    "value1_text": "We are a club for everyone: beginners, intermediate and advanced. Nobody gets left behind.",
+    "value2_title": "Community",
+    "value2_text": "More than a running club, we are a family that supports each other.",
+    "value3_title": "Passion",
+    "value3_text": "We run because we love running. The joy of every kilometer drives us.",
+    "meetups_title": "Our Meetups",
+    "monday_title": "Monday",
+    "monday_time": "18:30",
+    "monday_desc": "Easy start-of-week training. Ideal for beginners and to activate the body.",
+    "monday_distance": "5-8 km",
+    "thursday_title": "Thursday",
+    "thursday_time": "18:00",
+    "thursday_desc": "Interval and technique training. For all levels with adapted groups.",
+    "thursday_distance": "6-10 km",
+    "sunday_title": "Sunday",
+    "sunday_time": "09:00",
+    "sunday_desc": "Long weekend run. We explore routes through the parks and the Göta river.",
+    "sunday_distance": "10-20 km",
+    "meeting_point": "Meeting point",
+    "meeting_location": "Kungsparken, Göteborg"
+  },
+  "contact": {
+    "title": "Join the Club",
+    "subtitle": "Ready to run with us? Fill out the form and we'll get in touch with you.",
+    "name": "First Name",
+    "surname": "Last Name",
+    "birthdate": "Date of Birth",
+    "email": "Email",
+    "phone": "Phone",
+    "level": "Level",
+    "level_beginner": "Beginner",
+    "level_intermediate": "Intermediate",
+    "level_professional": "Professional",
+    "purpose": "Purpose",
+    "purpose_join": "Join the club",
+    "purpose_monday": "Sign up for Monday",
+    "purpose_thursday": "Sign up for Thursday",
+    "purpose_sunday": "Sign up for Sunday",
+    "message": "Message (optional)",
+    "send": "Send",
+    "success_title": "Registration sent!",
+    "success_text": "Thank you for joining Sol Running Club. We will contact you soon.",
+    "error_text": "There was an error. Please try again.",
+    "name_placeholder": "Your name",
+    "surname_placeholder": "Your last name",
+    "email_placeholder": "you@email.com",
+    "phone_placeholder": "+46 XXX XXX XXX",
+    "message_placeholder": "Tell us something about yourself or your running experience..."
+  },
+  "accessibility": {
+    "title": "Accessibility",
+    "dyslexia": "Dyslexia font",
+    "magnifier": "Magnifier",
+    "highlight_links": "Highlight links"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "made_with": "Made with ❤️ in Göteborg"
+  },
+  "chat": {
+    "tooltip": "Chat with us on WhatsApp"
+  },
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode"
+  }
+}

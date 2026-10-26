@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Hem",
+    "about": "Om Oss",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Sol Running Club Göteborg",
+    "subtitle": "Vi springer tillsammans under den nordiska solen",
+    "cta": "Gå med i klubben",
+    "cta2": "Se träffar"
+  },
+  "about": {
+    "title": "Om Oss",
+    "story_title": "Vår Historia",
+    "story_text": "Sol Running Club föddes i Göteborg ur passionen hos en liten grupp löpare som ville dela mer än kilometer: de ville dela energi, motivation och skönheten i att springa genom gatorna och parkerna i denna fantastiska stad. Vi började som fyra vänner och idag är vi en levande gemenskap av löpare på alla nivåer.",
+    "story_text2": "Vårt namn, Sol, speglar den positiva energi vi tar med oss till varje träning. Även om Göteborg inte alltid har sol, tar vi alltid med den oss.",
+    "values_title": "Våra Värderingar",
+    "value1_title": "Inkludering",
+    "value1_text": "Vi är en klubb för alla: nybörjare, mellannivå och avancerade. Ingen lämnas efter.",
+    "value2_title": "Gemenskap",
+    "value2_text": "Mer än en löparklubb är vi en familj som stödjer varandra.",
+    "value3_title": "Passion",
+    "value3_text": "Vi springer för att vi älskar att springa. Glädjen i varje kilometer driver oss.",
+    "meetups_title": "Våra Träffar",
+    "monday_title": "Måndag",
+    "monday_time": "18:30",
+    "monday_desc": "Lugn träning i början av veckan. Perfekt för nybörjare och för att aktivera kroppen.",
+    "monday_distance": "5-8 km",
+    "thursday_title": "Torsdag",
+    "thursday_time": "18:00",
+    "thursday_desc": "Intervall- och teknikträning. För alla nivåer med anpassade grupper.",
+    "thursday_distance": "6-10 km",
+    "sunday_title": "Söndag",
+    "sunday_time": "09:00",
+    "sunday_desc": "Lång helgtur. Vi utforskar rutter genom parkerna och längs Göta älv.",
+    "sunday_distance": "10-20 km",
+    "meeting_point": "Mötesplats",
+    "meeting_location": "Kungsparken, Göteborg"
+  },
+  "contact": {
+    "title": "Gå med i klubben",
+    "subtitle": "Redo att springa med oss? Fyll i formuläret så kontaktar vi dig.",
+    "name": "Förnamn",
+    "surname": "Efternamn",
+    "birthdate": "Födelsedatum",
+    "email": "E-post",
+    "phone": "Telefon",
+    "level": "Nivå",
+    "level_beginner": "Nybörjare",
+    "level_intermediate": "Mellannivå",
+    "level_professional": "Professionell",
+    "purpose": "Syfte",
+    "purpose_join": "Gå med i klubben",
+    "purpose_monday": "Anmäl mig till måndag",
+    "purpose_thursday": "Anmäl mig till torsdag",
+    "purpose_sunday": "Anmäl mig till söndag",
+    "message": "Meddelande (valfritt)",
+    "send": "Skicka",
+    "success_title": "Registrering skickad!",
+    "success_text": "Tack för att du går med i Sol Running Club. Vi kontaktar dig snart.",
+    "error_text": "Det uppstod ett fel. Försök igen.",
+    "name_placeholder": "Ditt namn",
+    "surname_placeholder": "Ditt efternamn",
+    "email_placeholder": "du@email.com",
+    "phone_placeholder": "+46 XXX XXX XXX",
+    "message_placeholder": "Berätta något om dig själv eller din löparerfarenhet..."
+  },
+  "accessibility": {
+    "title": "Tillgänglighet",
+    "dyslexia": "Dyslexi-typsnitt",
+    "magnifier": "Förstoringsglas",
+    "highlight_links": "Markera länkar"
+  },
+  "footer": {
+    "rights": "Alla rättigheter förbehållna",
+    "made_with": "Gjort med ❤️ i Göteborg"
+  },
+  "chat": {
+    "tooltip": "Chatta med oss på WhatsApp"
+  },
+  "theme": {
+    "light": "Ljust läge",
+    "dark": "Mörkt läge"
+  }
+}

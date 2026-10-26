@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════╗
+  ║        SOL RUNNING CLUB GÖTEBORG — index.html        ║
+  ╠══════════════════════════════════════════════════════╣
+  ║  Desarrollado por: [Tu nombre]                       ║
+  ║  Última actualización: Octubre 2026                  ║
+  ╠══════════════════════════════════════════════════════╣
+  ║  ESTRUCTURA:                                         ║
+  ║  1. <head>     — Meta, CSS, fuentes                  ║
+  ║  2. #navbar    — Barra de navegación fija             ║
+  ║  3. #home      — Hero / Sección de inicio            ║
+  ║  4. #about     — Quiénes somos + Quedadas            ║
+  ║  5. #contact   — Formulario de registro              ║
+  ║  6. #footer    — Pie de página                       ║
+  ║  7. Botón WhatsApp flotante                          ║
+  ║  8. Lupa de accesibilidad                            ║
+  ╚══════════════════════════════════════════════════════╝
+-->
+<html lang="es" data-theme="dark">
+
+<head>
+  <!-- ================================================
+       META TAGS — SEO y configuración del navegador
+       ================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Sol Running Club Göteborg — Club de running para todos los niveles. Entrenamos lunes, jueves y domingo en Göteborg." />
+  <meta name="keywords" content="running club, Göteborg, correr, löparklubb, running, España, Suecia" />
+  <meta name="author" content="Sol Running Club" />
+  <meta name="theme-color" content="#F5A623" />
+
+  <!-- Open Graph (compartir en redes sociales) -->
+  <meta property="og:title" content="Sol Running Club Göteborg" />
+  <meta property="og:description" content="Únete al club de running más vibrante de Göteborg." />
+  <meta property="og:image" content="src/assets/logo.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon
+       📌 MODIFICACIÓN: sustituye 'src/assets/logo.jpg' por tu favicon.ico si tienes uno -->
+  <link rel="icon" type="image/jpeg" href="src/assets/logo.jpg" />
+  <link rel="apple-touch-icon" href="src/assets/logo.jpg" />
+
+  <title>Sol Running Club Göteborg</title>
+
+  <!-- ================================================
+       CSS
+       ================================================ -->
+  <link rel="stylesheet" href="src/styles/main.css" />
+
+  <!-- Google Fonts (cargadas también en el CSS, doble seguridad) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+  <!-- ================================================
+       NAVBAR — BARRA DE NAVEGACIÓN FIJA
+       ================================================
+       Contiene: logo (inicio), links, tema, idioma,
+       accesibilidad y hamburger para móvil.
+       ================================================ -->
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="navbar-inner">
+
+      <!-- ── LOGO / BOTÓN INICIO ──────────────────────
+           📌 LOGO: El logo está en src/assets/logo.jpg
+           Si quieres usar tu logo original, reemplaza
+           el archivo logo.jpg por el tuyo (mismo nombre)
+           o cambia la ruta en el atributo src="" de abajo.
+           ─────────────────────────────────────────── -->
+      <a href="#home" id="logo-btn" aria-label="Ir al inicio — Sol Running Club">
+        <img src="src/assets/logo.jpg" alt="Sol Running Club Göteborg Logo" width="44" height="44" />
+        <span class="logo-text">Sol Running Club</span>
+      </a>
+
+      <!-- ── LINKS DE NAVEGACIÓN (escritorio) ─────── -->
+      <ul class="nav-links" role="menubar">
+        <li role="none">
+          <a href="#home" class="nav-link active" role="menuitem" data-section="home" data-i18n="nav.home">Inicio</a>
+        </li>
+        <li role="none">
+          <a href="#about" class="nav-link" role="menuitem" data-section="about" data-i18n="nav.about">Quiénes Somos</a>
+        </li>
+        <li role="none">
+          <a href="#contact" class="nav-link" role="menuitem" data-section="contact" data-i18n="nav.contact">Contacto</a>
+        </li>
+      </ul>
+
+      <!-- ── CONTROLES DERECHA DEL NAVBAR ─────────── -->
+      <div class="nav-controls">
+
+        <!-- Botón TEMA (claro/oscuro)
+             El icono cambia automáticamente con JS -->
+        <button id="theme-btn" class="nav-icon-btn" title="Cambiar tema" aria-label="Cambiar tema claro/oscuro">
+          <span>🌙</span>
+        </button>
+
+        <!-- Selector de IDIOMA
+             Idiomas disponibles: es=Español, en=Inglés, sv=Sueco
+             📌 Para añadir un idioma: crea src/locales/XX/translation.json
+                y añade un nuevo <button class="lang-option" data-lang="XX"> aquí -->
+        <div class="lang-dropdown-wrapper">
+          <button id="lang-btn" class="nav-icon-btn" title="Cambiar idioma" aria-label="Seleccionar idioma" aria-haspopup="true">
+            <span>🇪🇸</span>
+          </button>
+          <div id="lang-menu" class="lang-menu" role="menu" aria-label="Selección de idioma">
+            <button class="lang-option active" data-lang="es" role="menuitem"><img src="src/assets/españaGIF.gif" alt="España" style="width: 20px; height: 20px;"> Español</button>
+            <button class="lang-option" data-lang="en" role="menuitem"><img src="src/assets/uk.gif" alt="Inglaterra" style="width: 20px; height: 20px;"> English</button>
+            <button class="lang-option" data-lang="sv" role="menuitem"><img src="src/assets/suecia.gif" alt="Suecia" style="width: 20px; height: 20px;"> Svenska</button>
+          </div>
+        </div>
+
+        <!-- Botón ACCESIBILIDAD
+             Opciones: dislexia, lupa, resaltar enlaces -->
+        <div class="a11y-dropdown-wrapper">
+          <button id="a11y-btn" class="nav-icon-btn" title="Opciones de accesibilidad" aria-label="Opciones de accesibilidad" aria-haspopup="true">
+            <span>♿</span>
+          </button>
+          <div id="a11y-menu" class="a11y-menu" role="menu" aria-label="Opciones de accesibilidad">
+            <p class="a11y-title" data-i18n="accessibility.title">Accesibilidad</p>
+
+            <!-- Fuente para dislexia -->
+            <button id="a11y-dyslexia" class="a11y-option" role="menuitemcheckbox" aria-checked="false">
+              <span class="a11y-icon">📖</span>
+              <span data-i18n="accessibility.dyslexia">Fuente dislexia</span>
+            </button>
+
+            <!-- Lupa al pasar el ratón -->
+            <button id="a11y-magnifier" class="a11y-option" role="menuitemcheckbox" aria-checked="false">
+              <span class="a11y-icon">🔍</span>
+              <span data-i18n="accessibility.magnifier">Lupa</span>
+            </button>
+
+            <!-- Resaltar todos los enlaces -->
+            <button id="a11y-links" class="a11y-option" role="menuitemcheckbox" aria-checked="false">
+              <span class="a11y-icon">🔗</span>
+              <span data-i18n="accessibility.highlight_links">Resaltar enlaces</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Botón HAMBURGER (solo visible en móvil)
+             Se oculta automáticamente en pantallas ≥ 768px -->
+        <button id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div><!-- /nav-controls -->
+    </div><!-- /navbar-inner -->
+  </nav>
+
+  <!-- MENÚ MÓVIL (desplegable bajo el navbar) -->
+  <div id="mobile-menu" role="dialog" aria-label="Menú de navegación móvil">
+    <a href="#home" class="mobile-nav-link" data-i18n="nav.home">🏠 Inicio</a>
+    <a href="#about" class="mobile-nav-link" data-i18n="nav.about">👥 Quiénes Somos</a>
+    <a href="#contact" class="mobile-nav-link" data-i18n="nav.contact">📩 Contacto</a>
+  </div>
+
+
+  <!-- ================================================
+       SECCIÓN HERO — #home (INICIO)
+       ================================================
+       La sección de inicio visible al cargar la web.
+       📌 TEXTOS: edítalos en src/locales/XX/translation.json
+          bajo las claves "hero.*"
+       ================================================ -->
+  <section id="home" aria-label="Inicio">
+
+    <!-- Fondo con gradiente y efecto de luz -->
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <!-- Partículas flotantes (generadas por JS) -->
+    <div class="hero-particles" aria-hidden="true"></div>
+
+    <!-- Contenido principal del hero -->
+    <div class="hero-content">
+
+      <!-- ------------------------------------------ Logo grande centrado-------------------------------------------- -->
+      <div class="hero-logo-wrap">
+        <!-- 📌 LOGO: mismo archivo que en el navbar (src/assets/logo.jpg) 
+        <img class="hero-logo" src="src/assets/logo.jpg" alt="Sol Running Club Göteborg" />
+      </div>
+      -->
+
+      <!-- Badge de estado activo 
+      <div class="hero-badge" aria-label="Club activo">
+        Göteborg, Suecia
+      </div>
+      -->
+
+      <!-- Título principal -->
+      <h1 class="hero-title">
+        <span data-i18n="hero.title">Sol Running Club</span>
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        Correr juntos nos hace mejores.
+      </p>
+
+      <!-- Botones CTA -->
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">
+          🏃 <span data-i18n="hero.cta">Únete al club</span>
+        </a>
+        <a href="#about" class="btn-secondary">
+          📅 <span data-i18n="hero.cta2">Ver quedadas</span>
+        </a>
+      </div>
+
+      <!-- Animación de puntos corriendo -->
+      <div class="running-line" aria-hidden="true">
+        <div class="run-dot"></div>
+        <div class="run-dot"></div>
+        <div class="run-dot"></div>
+        <div class="run-dot"></div>
+        <div class="run-dot"></div>
+      </div>
+
+      <!-- Estadísticas del club
+           📌 MODIFICACIÓN: cambia los números según tu club -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">3</span>
+          <!-- 📌 Quedadas por semana -->
+          <span class="stat-label">Quedadas semanales</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">+50</span>
+          <!-- 📌 Número de miembros — cambia según crezca el club -->
+          <span class="stat-label">Miembros</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Km juntos</span>
+        </div>
+      </div>
+
+    </div><!-- /hero-content -->
+
+    <!-- Indicador de scroll 
+    <div class="hero-scroll" aria-hidden="true">
+      <span>↓</span>
+      <span style="font-size:0.7rem">Scroll</span>
+    </div>
+    -->
+
+  </section>
+  <!-- /HERO -->
+
+
+  <!-- ================================================
+       SECCIÓN QUIÉNES SOMOS — #about
+       ================================================
+       Contiene: historia del club, valores y quedadas.
+       📌 TEXTOS: edítalos en src/locales/XX/translation.json
+          bajo las claves "about.*"
+       ================================================ -->
+  <section id="about" class="section section-alt" aria-label="Quiénes somos">
+    <div class="container">
+
+      <!-- Cabecera de sección -->
+      <div class="section-header reveal">
+        <span class="section-eyebrow">☀️ Nuestro Club</span>
+        <h2 class="section-title" data-i18n="about.title">Quiénes Somos</h2>
+        <p class="section-subtitle">Corremos por Göteborg. Vivimos el running. Somos una familia.</p>
+      </div>
+
+      <!-- ── HISTORIA DEL CLUB ───────────────────────
+           📌 MODIFICACIÓN: Edita los textos de historia
+              en src/locales/XX/translation.json
+              Claves: about.story_title, about.story_text, about.story_text2 -->
+      <div class="about-grid">
+        <div class="story-card reveal reveal-delay-1">
+          <div class="story-icon">☀️</div>
+          <h3 data-i18n="about.story_title">Nuestra Historia</h3>
+          <p data-i18n="about.story_text">
+            Sol Running Club nació en Málaga de la pasión de un pequeño grupo de corredores...
+          </p>
+          <p data-i18n="about.story_text2">
+            Nuestro nombre refleja esa energía positiva y el buen clima de Málaga donde queremos trasladarlo a Göteborg...
+          </p>
+        </div>
+
+        <div class="story-card reveal reveal-delay-2">
+          <div class="story-icon">🏅</div>
+          <h3>¿Por qué correr con nosotros?</h3>
+          <!-- 📌 MODIFICACIÓN: puedes editar este texto directamente aquí
+               o añadir la clave en los archivos de traducción -->
+          <p>Porque el running es mejor en compañía. En Sol Running Club encontrarás motivación, rutina y una comunidad increíble que te ayudará a mejorar cada día.</p>
+          <p>Grupos adaptados a cada nivel — nunca correrás solo y nunca te quedarás atrás.</p>
+        </div>
+      </div>
+
+      <!-- ── VALORES DEL CLUB ──────────────────────── -->
+      <div class="section-header reveal" style="margin-top:1rem;">
+        <span class="section-eyebrow">💛 Lo que nos mueve</span>
+        <!-- <h3 class="section-title" style="font-size:clamp(1.4rem,4vw,2rem);" data-i18n="about.values_title">Nuestros Valores</h3> -->
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card reveal reveal-delay-1">
+          <span class="value-icon">🤝</span>
+          <h4 data-i18n="about.value1_title">Inclusividad</h4>
+          <p data-i18n="about.value1_text">Somos un club para todos: principiantes, intermedios y avanzados.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <span class="value-icon">❤️</span>
+          <h4 data-i18n="about.value2_title">Comunidad</h4>
+          <p data-i18n="about.value2_text">Más que un club de running, somos un grupo de amig@s que nos juntamos para hacer lo que nos gusta.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-3">
+          <span class="value-icon">🔥</span>
+          <h4 data-i18n="about.value3_title">Pasión</h4>
+          <p data-i18n="about.value3_text">Corremos porque amamos correr.</p>
+        </div>
+      </div>
+
+      <!-- ── QUEDADAS SEMANALES ────────────────────────
+           📌 MODIFICACIÓN: Para cambiar horas, días o descripción
+              edita src/locales/XX/translation.json
+              Claves: about.monday_*, about.thursday_*, about.sunday_*
+
+           📌 PUNTO DE ENCUENTRO: Actualmente "Kungsparken, Göteborg"
+              Cambia la clave about.meeting_location en los JSON. -->
+      <div class="section-header reveal" style="margin-top:2rem;">
+        <span class="section-eyebrow">📅 Cada semana</span>
+        <h3 class="section-title" style="font-size:clamp(1.4rem,4vw,2rem);" data-i18n="about.meetups_title">Nuestras Quedadas</h3>
+      </div>
+
+      <div class="meetups-grid">
+
+        <!-- LUNES -->
+        <div class="meetup-card reveal reveal-delay-1">
+          <div class="meetup-day-badge" data-i18n="about.monday_title">Lunes</div>
+          <div class="meetup-header">
+            <span class="meetup-time" data-i18n="about.monday_time">18:00</span>
+            <span class="meetup-emoji">🌅</span>
+          </div>
+          <p class="meetup-desc" data-i18n="about.monday_desc">
+            Entrenamiento suave de inicio de semana.
+          </p>
+          <div class="meetup-meta">
+            <span class="meetup-tag">📍 <span data-i18n="about.meeting_location">Kungsparken</span></span>
+            <span class="meetup-tag">📏 <span data-i18n="about.monday_distance">5-8 km</span></span>
+          </div>
+        </div>
+
+        <!-- JUEVES -->
+        <div class="meetup-card reveal reveal-delay-2">
+          <div class="meetup-day-badge" data-i18n="about.thursday_title">Jueves</div>
+          <div class="meetup-header">
+            <span class="meetup-time" data-i18n="about.thursday_time">18:00</span>
+            <span class="meetup-emoji">⚡</span>
+          </div>
+          <p class="meetup-desc" data-i18n="about.thursday_desc">
+            Entrenamiento de intervalos y técnica.
+          </p>
+          <div class="meetup-meta">
+            <span class="meetup-tag">📍 <span data-i18n="about.meeting_location">Kungsparken</span></span>
+            <span class="meetup-tag">📏 <span data-i18n="about.thursday_distance">6-10 km</span></span>
+          </div>
+        </div>
+
+        <!-- DOMINGO -->
+        <div class="meetup-card reveal reveal-delay-3">
+          <div class="meetup-day-badge" data-i18n="about.sunday_title">Domingo</div>
+          <div class="meetup-header">
+            <span class="meetup-time" data-i18n="about.sunday_time">10:00</span>
+            <span class="meetup-emoji">🏆</span>
+          </div>
+          <p class="meetup-desc" data-i18n="about.sunday_desc">
+            Tirada larga del fin de semana.
+          </p>
+          <div class="meetup-meta">
+            <span class="meetup-tag">📍 <span data-i18n="about.meeting_location">Kungsparken</span></span>
+            <span class="meetup-tag">📏 <span data-i18n="about.sunday_distance">10-20 km</span></span>
+          </div>
+        </div>
+
+      </div><!-- /meetups-grid -->
+
+    </div><!-- /container -->
+  </section>
+  <!-- /ABOUT -->
+
+
+  <!-- ================================================
+       SECCIÓN CONTACTO — #contact
+       ================================================
+       Formulario de registro para nuevos miembros o
+       personas que quieran apuntarse a una quedada.
+
+       📌 BASE DE DATOS: Los registros se guardan en
+          localStorage del navegador por defecto.
+          Para conectar a una BD real, edita:
+          src/js/main.js → función guardarEnBD()
+
+       📌 CAMPOS DEL FORMULARIO: Si quieres añadir o
+          quitar campos, edítalos aquí y actualiza
+          también la función guardarEnBD() en main.js
+       ================================================ -->
+  <section id="contact" class="section" aria-label="Formulario de contacto">
+    <div class="container">
+
+      <!-- Cabecera -->
+      <div class="section-header reveal">
+        <span class="section-eyebrow">📩 Únete al club</span>
+        <!-- <h2 class="section-title" data-i18n="contact.title">Únete al Club</h2> -->
+        <p class="section-subtitle" data-i18n="contact.subtitle">
+          ¿Listo para correr con nosotros? Rellena el formulario.
+        </p>
+      </div>
+
+      <div class="contact-wrapper">
+
+        <!-- ── INFO DE CONTACTO (izquierda) ─────────
+             📌 MODIFICACIÓN: Actualiza los datos reales
+                de tu club (email, ubicación, etc.) -->
+        <div class="contact-info reveal">
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📍</div>
+            <div class="contact-info-text">
+              <h4>Ubicación</h4>
+              <!-- 📌 Cambia la ubicación del punto de encuentro -->
+              <p>Fysiken Gibraltargatan, Göteborg</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📅</div>
+            <div class="contact-info-text">
+              <h4>Horario</h4>
+              <!-- 📌 Actualiza los días y horas según tus quedadas -->
+              <p>Lun 18:00 · Jue 18:00 · Dom 10:00</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📧</div>
+            <div class="contact-info-text">
+              <h4>Email</h4>
+              <!-- 📌 CAMBIA ESTE EMAIL por el tuyo real -->
+              <p>solrunningclub@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">💬</div>
+            <div class="contact-info-text">
+              <h4>WhatsApp</h4>
+              <!-- 📌 El número de WA se configura en src/js/main.js → WHATSAPP_NUMBER -->
+              <p>Contactanos por Whatsapp para mas información 👇</p>
+            </div>
+          </div>
+
+        </div><!-- /contact-info -->
+
+        <!-- ── FORMULARIO ────────────────────────── -->
+        <div class="contact-form-card reveal reveal-delay-1">
+          <form id="contact-form" novalidate>
+
+            <!-- Fila 1: Nombre y Apellidos -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre" data-i18n="contact.name">Nombre</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  required
+                  autocomplete="given-name"
+                  data-i18n-placeholder="contact.name_placeholder"
+                  placeholder="Tu nombre"
+                />
+              </div>
+              <div class="form-group">
+                <label for="apellidos" data-i18n="contact.surname">Apellidos</label>
+                <input
+                  type="text"
+                  id="apellidos"
+                  name="apellidos"
+                  required
+                  autocomplete="family-name"
+                  data-i18n-placeholder="contact.surname_placeholder"
+                  placeholder="Tus apellidos"
+                />
+              </div>
+            </div>
+
+            <!-- Fila 2: Fecha de nacimiento y Email -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fecha_nacimiento" data-i18n="contact.birthdate">Fecha de Nacimiento</label>
+                <input
+                  type="date"
+                  id="fecha_nacimiento"
+                  name="fecha_nacimiento"
+                  required
+                  autocomplete="bday"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email" data-i18n="contact.email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  data-i18n-placeholder="contact.email_placeholder"
+                  placeholder="tu@email.com"
+                />
+              </div>
+            </div>
+
+            <!-- Fila 3: Teléfono y Nivel -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefono" data-i18n="contact.phone">Teléfono</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  autocomplete="tel"
+                  data-i18n-placeholder="contact.phone_placeholder"
+                  placeholder="+46 XXX XXX XXX"
+                />
+              </div>
+              <div class="form-group">
+                <!-- 📌 NIVEL: Opciones disponibles: Principiante / Medio / Profesional -->
+                <label for="nivel" data-i18n="contact.level">Nivel</label>
+                <select id="nivel" name="nivel" required>
+                  <option value="" disabled selected>— Selecciona —</option>
+                  <option value="principiante" data-i18n="contact.level_beginner">Principiante</option>
+                  <option value="medio" data-i18n="contact.level_intermediate">Medio</option>
+                  <option value="profesional" data-i18n="contact.level_professional">Profesional</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Motivo / Interés
+                 📌 Opciones: Unirse al club o quedadas específicas -->
+            <div class="form-group" style="margin-bottom:1rem;">
+              <label for="motivo" data-i18n="contact.purpose">Motivo</label>
+              <select id="motivo" name="motivo" required>
+                <option value="" disabled selected>— ¿Qué te interesa? —</option>
+                <option value="club" data-i18n="contact.purpose_join">Unirme al club</option>
+                <option value="lunes" data-i18n="contact.purpose_monday">Apuntarme al Lunes</option>
+                <option value="jueves" data-i18n="contact.purpose_thursday">Apuntarme al Jueves</option>
+                <option value="domingo" data-i18n="contact.purpose_sunday">Apuntarme al Domingo</option>
+              </select>
+            </div>
+
+            <!-- Mensaje opcional -->
+            <div class="form-group" style="margin-bottom:1.25rem;">
+              <label for="mensaje" data-i18n="contact.message">Mensaje (opcional)</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="3"
+                data-i18n-placeholder="contact.message_placeholder"
+                placeholder="Cuéntanos algo sobre ti..."
+              ></textarea>
+            </div>
+
+            <!-- Botón de envío -->
+            <button type="submit" class="btn-form-submit" id="submit-btn">
+              🏃 <span data-i18n="contact.send">Enviar</span>
+            </button>
+
+            <!-- Mensaje de feedback (éxito/error) -->
+            <!-- El JS lo rellena y muestra automáticamente -->
+            <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+
+          </form>
+        </div><!-- /contact-form-card -->
+
+      </div><!-- /contact-wrapper -->
+    </div><!-- /container -->
+  </section>
+  <!-- /CONTACT -->
+
+
+  <!-- ================================================
+       FOOTER — PIE DE PÁGINA
+       ================================================ -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <!-- Logo del footer -->
+      <div class="footer-logo">
+        <img src="src/assets/logo.jpg" alt="Sol Running Club" width="40" height="40" />
+        <span class="footer-logo-text">Sol Running Club</span>
+      </div>
+
+      <!-- Links del footer -->
+      <nav class="footer-links" aria-label="Links del pie de página">
+        <a href="#home" class="footer-link" data-i18n="nav.home">Inicio</a>
+        <a href="#about" class="footer-link" data-i18n="nav.about">Quiénes Somos</a>
+        <a href="#contact" class="footer-link" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <!-- Copyright -->
+      <div>
+        <!-- 📌 MODIFICACIÓN: Actualiza el año y el nombre si lo deseas -->
+        <p class="footer-copy">© 2026 Sol Running Club Göteborg · <span data-i18n="footer.rights">Todos los derechos reservados</span></p>
+        <p class="footer-made" data-i18n="footer.made_with">Hecho con ❤️ en Göteborg</p>
+      </div>
+
+    </div>
+  </footer>
+  <!-- /FOOTER -->
+
+
+  <!-- ================================================
+       BOTÓN WHATSAPP FLOTANTE
+       ================================================
+       📌 NÚMERO DE WHATSAPP:
+          Abre el archivo: src/js/main.js
+          Busca la línea: const WHATSAPP_NUMBER = '34 666912039' '46 0739611443';
+          Reemplaza 'XXXXXXXXXX' con tu número en formato
+          internacional sin el símbolo +
+          Ejemplo Suecia: '46701234567'
+          Ejemplo España: '34612345678'
+       ================================================ -->
+  <a
+    id="whatsapp-btn"
+    href="#"
+    aria-label="Contactar por WhatsApp"
+    role="link"
+  >
+    <!-- Ícono WhatsApp SVG -->
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+
+    <!-- Punto de notificación animado -->
+    <span class="whatsapp-pulse" aria-hidden="true"></span>
+
+    <!-- Tooltip (solo en escritorio) -->
+    <span class="whatsapp-tooltip" data-i18n="chat.tooltip">Chatea con nosotros en WhatsApp</span>
+  </a>
+  <!-- /WHATSAPP -->
+
+
+  <!-- ================================================
+       LUPA DE ACCESIBILIDAD
+       ================================================
+       Se activa desde el menú de accesibilidad del navbar.
+       El JS la posiciona siguiendo el cursor del ratón.
+       ================================================ -->
+  <div id="magnifier-glass" aria-hidden="true" role="presentation"></div>
+
+
+  <!-- ================================================
+       SCRIPTS
+       ================================================
+       📌 ORDEN IMPORTANTE: No cambies el orden de los scripts.
+       i18next está instalado en node_modules y se carga
+       como módulo de npm.
+       ================================================ -->
+  <script src="node_modules/i18next/dist/umd/i18next.min.js"></script>
+  <script src="src/js/main.js"></script>
+
+</body>
+</html>
